@@ -1,5 +1,5 @@
 ---
-name: dbt_project
+name: orders_cases_events
 version: 1.0.0
 config-version: 2
 
@@ -21,7 +21,7 @@ vars:
   data_interval_end: '2022-08-24 13:00:00'
 
 models:
-  dbt_project:
+  orders_cases_events:
     +materialized: view
     +file_format: delta
     staging:
