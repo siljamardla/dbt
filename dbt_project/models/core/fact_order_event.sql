@@ -1,7 +1,6 @@
 SELECT 
       soe.*
-    , so.customer_id
+    , fo.customer_id
 FROM        {{ ref("stg_order_event") }} soe
-LEFT JOIN   {{ ref("stg_order") }}       so
-    ON soe.order_id = so.order_id
-    
+LEFT JOIN   {{ ref("fact_order") }}      fo
+    ON soe.order_id = fo.order_id
