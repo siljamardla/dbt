@@ -1,5 +1,5 @@
-support_case_id,order_id,order_event_date,order_event_ts
-1,1,2024-01-22,2024-01-22 10:03:15
-2,2,2024-01-27,2024-01-27 10:00:03
-3,3,2024-01-29,2024-01-29 08:09:10
-4,3,2024-01-29,2024-01-29 19:54:00
+support_case_id,order_id,support_case_created_date,support_case_created_ts,support_case_topic
+1,1,2024-01-22,2024-01-22 10:03:15,order_inquiry
+2,2,2024-01-27,2024-01-27 10:00:03,order_inquiry
+3,3,2024-01-29,2024-01-29 08:09:10,order_rescheduling
+4,3,2024-01-29,2024-01-29 19:54:00,order_inquiry

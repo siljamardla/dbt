@@ -1,0 +1,1 @@
+SELECT * FROM {{ ref("support_case_event") }}

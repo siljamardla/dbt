@@ -1,0 +1,10 @@
+support_case_event_id,support_case_id,employee_id,support_case_event,support_case_event_date,support_case_event_ts
+1,1,,receive_email,2024-01-22,2024-01-22 10:03:15
+2,1,1,send_email,2024-01-22,2024-01-22 10:50:01
+3,1,1,complete_support_case,2024-01-22,2024-01-22 10:50:01
+4,2,,receive_email,2024-01-27,2024-01-27 10:00:03
+5,2,2,send_email,2024-01-27,2024-01-27 10:20:45
+6,3,3,receive_call,2024-01-29,2024-01-29 08:09:10
+7,3,3,complete_support_case,2024-01-29,2024-01-29 08:15:15
+8,4,4,receive_call,2024-01-29,2024-01-29 19:54:00
+9,4,5,make_call,2024-01-29,2024-01-29 20:15:10

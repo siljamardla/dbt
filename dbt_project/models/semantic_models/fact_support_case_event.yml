@@ -1,0 +1,26 @@
+---
+version: 2
+
+semantic_models:
+
+  - name: fact_support_case_event
+    model: ref('fact_support_case_event')
+    defaults:
+      agg_time_dimension: support_case_event_date
+    entities:
+      - name: support_case_event
+        expr: support_case_event_id
+        type: primary
+      - name: support_case
+        expr: support_case_id
+        type: foreign
+    measures:
+      - name: count_support_case_events
+        expr: 1
+        agg: sum
+        create_metric: true
+    dimensions:
+      - name: support_case_event_date
+        type: time
+        type_params:
+          time_granularity: day
