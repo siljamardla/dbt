@@ -1,0 +1,30 @@
+---
+version: 2
+
+semantic_models:
+
+  - name: fact_order
+    model: ref('fact_order')
+    defaults:
+      agg_time_dimension: order_created_date
+    entities:
+      - name: order
+        expr: order_id
+        type: primary
+      - name: customer
+        expr: customer_id
+        type: foreign
+    measures:
+      - name: count_orders
+        expr: 1
+        agg: sum
+        create_metric: true
+      - name: sum_revenue_eur
+        expr: order_value_eur
+        agg: sum
+        create_metric: true
+    dimensions:
+      - name: order_created_date
+        type: time
+        type_params:
+          time_granularity: day

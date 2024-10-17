@@ -1,0 +1,22 @@
+---
+version: 2
+
+metrics:
+
+  - name: avg_events_per_order
+    label: avg_events_per_order
+    type: ratio
+    type_params:
+      numerator: 
+        name: count_order_events
+      denominator: 
+        name: count_orders
+
+  - name: avg_rescheduled_events_per_order
+    label: avg_rescheduled_events_per_order
+    type: ratio
+    type_params:
+      numerator: 
+        name: count_order_rescheduled_events
+      denominator: 
+        name: count_orders

@@ -1,0 +1,25 @@
+---
+version: 2
+
+semantic_models:
+
+  - name: dim_employee
+    model: ref('dim_employee')
+    defaults:
+      agg_time_dimension: employee_created_date
+    entities:
+      - name: employee
+        expr: employee_id
+        type: primary
+    measures:
+      - name: count_employees
+        expr: 1
+        agg: sum
+        create_metric: true
+    dimensions:
+      - name: employee_created_date
+        type: time
+        type_params:
+          time_granularity: day
+      - name: employee_name
+        type: categorical

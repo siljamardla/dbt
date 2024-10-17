@@ -1,0 +1,23 @@
+---
+version: 2
+
+semantic_models:
+
+  - name: fact_support_case
+    model: ref('fact_support_case')
+    defaults:
+      agg_time_dimension: support_case_created_date
+    entities:
+      - name: support_case
+        expr: support_case_id
+        type: primary
+    measures:
+      - name: count_support_cases
+        expr: 1
+        agg: sum
+        create_metric: true
+    dimensions:
+      - name: support_case_created_date
+        type: time
+        type_params:
+          time_granularity: day

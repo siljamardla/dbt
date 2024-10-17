@@ -1,0 +1,15 @@
+---
+version: 2
+
+models:
+  - name: metricflow_time_spine
+    description: This model is needed for MetricFlow to work. Do not move or rename.
+    config:
+      materialized: table
+      schema: int_models_spark
+      tags: [common_dim_once]
+    meta:
+      owner: '@silja.mardla'
+      state: live
+    columns:
+      - name: date_day
