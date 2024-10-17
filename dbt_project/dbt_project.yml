@@ -1,5 +1,5 @@
 ---
-name: CHANGE_TO_PROJECT_NAME
+name: dbt_project
 version: 1.0.0
 config-version: 2
 
@@ -7,6 +7,7 @@ profile: bolt-databricks
 
 model-paths: [models]
 macro-paths: [macros]
+seed-paths: [seeds]
 
 target-path: target
 clean-targets:
@@ -18,28 +19,20 @@ vars:
   data_interval_start: '2022-08-24 12:00:00'
   # next_execution_date from Airflow
   data_interval_end: '2022-08-24 13:00:00'
-  # Framework-level config - don't remove/change
-  elementary:
-    disable_dbt_artifacts_autoupload: true
 
 models:
-  CHANGE_TO_PROJECT_NAME:
-    +materialized: ephemeral
-    +post-hook: '{{ common.update_symlink_table() }}'
+  dbt_project:
+    +materialized: view
     +file_format: delta
-    marts:
-      +schema: mart_models_spark
+    staging:
       +docs:
-        node_color: darkred
-    core:
-      +schema: core_models_spark
-      +docs:
-        node_color: LightSeaGreen
+        node_color: silver
     intermediate:
-      +schema: int_models_spark
       +docs:
         node_color: gray
-  # Framework-level config - don't remove/change
-  elementary:
-    +schema: dbt_meta_spark
-    enabled: "{{ target.name in ['live', 'prelive', 'cd'] }}"
+    core:
+      +docs:
+        node_color: LightSeaGreen
+    marts:
+      +docs:
+        node_color: darkred
