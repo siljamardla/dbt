@@ -1,0 +1,11 @@
+customer_id,customer_created_date,customer_created_ts,customer_name,customer_type
+1,2023-12-05,2023-12-05 11:23:45,Customer_1,Type_1
+2,2023-12-08,2023-12-08 14:15:32,Customer_2,Type_2
+3,2023-12-12,2023-12-12 09:56:01,Customer_3,Type_1
+4,2023-12-14,2023-12-14 20:32:15,Customer_4,Type_2
+5,2023-12-17,2023-12-17 16:48:09,Customer_5,Type_1
+6,2023-12-21,2023-12-21 08:27:13,Customer_6,Type_2
+7,2023-12-24,2023-12-24 13:45:23,Customer_7,Type_1
+8,2023-12-26,2023-12-26 19:34:56,Customer_8,Type_2
+9,2023-12-28,2023-12-28 11:22:47,Customer_9,Type_1
+10,2023-12-30,2023-12-30 05:15:04,Customer_10,Type_2
