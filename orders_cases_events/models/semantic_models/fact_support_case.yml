@@ -11,6 +11,9 @@ semantic_models:
       - name: support_case
         expr: support_case_id
         type: primary
+      - name: customer
+        expr: customer_id
+        type: foreign
     measures:
       - name: count_support_cases
         expr: 1
